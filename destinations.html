@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - GlobeTrot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/destinations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" style="background-image: url('https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="container">
+                <h1>Explore Destinations</h1>
+                <p>Discover your perfect getaway from our curated collection</p>
+            </div>
+        </section>
+
+        <!-- Destinations Filters -->
+        <section class="destinations-filters">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="region-filter">Region</label>
+                        <select id="region-filter">
+                            <option value="all">All Regions</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="americas">Americas</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="type-filter">Type</label>
+                        <select id="type-filter">
+                            <option value="all">All Types</option>
+                            <option value="beach">Beach</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="city">City</option>
+                            <option value="countryside">Countryside</option>
+                            <option value="historical">Historical</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="budget-filter">Budget</label>
+                        <select id="budget-filter">
+                            <option value="all">All Budgets</option>
+                            <option value="economy">Economy</option>
+                            <option value="standard">Standard</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="destination-search" placeholder="Search destinations...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Grid -->
+        <section class="destinations-grid">
+            <div class="container">
+                <div class="destinations-container" id="destinations-container">
+                    <!-- Destinations will be loaded dynamically -->
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading destinations...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/destinations-page.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>

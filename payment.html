@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation - GlobeTrot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body> 
+    <header id="header"></header>
+
+    <main>
+        <section class="payment-confirmation">
+            <div class="container">
+                <div class="payment-status processing" id="payment-status">
+                    <div class="status-icon">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <h1>Processing Payment</h1>
+                    <p>Please wait while we process your payment...</p>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="payment-success hidden" id="payment-success">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1>Payment Successful!</h1>
+                    <p>Your booking has been confirmed. Thank you for choosing GlobeTrot!</p>
+                    <div class="booking-reference">
+                        <p>Booking Reference: <span id="booking-reference">GT-12345</span></p>
+                    </div>
+                    <div class="success-actions">
+                        <a href="dashboard.html" class="btn btn-primary">View Your Trip</a>
+                        <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeTrot - Your Travel Adventure Begins Here</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                    <div class="hero-content">
+                        <h1>Discover the World with GlobeTrot</h1>
+                        <p>Your journey to unforgettable experiences starts here</p>
+                        <a href="destinations.html" class="btn btn-primary">Explore Destinations</a>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                    <div class="hero-content">
+                        <h1>Experience Luxury Travel</h1>
+                        <p>Premium accommodations and exclusive experiences</p>
+                        <a href="destinations.html" class="btn btn-primary">Discover Luxury</a>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/1020016/pexels-photo-1020016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                    <div class="hero-content">
+                        <h1>Adventure Awaits</h1>
+                        <p>Thrilling experiences for the adventurous traveler</p>
+                        <a href="destinations.html" class="btn btn-primary">Find Adventures</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="slide-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <h2>Find Your Perfect Trip</h2>
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination" required>
+                                <option value="" disabled selected>Where to?</option>
+                                <option value="paris">Paris, France</option>
+                                <option value="tokyo">Tokyo, Japan</option>
+                                <option value="bali">Bali, Indonesia</option>
+                                <option value="newyork">New York, USA</option>
+                                <option value="rome">Rome, Italy</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-in">Check In</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Check Out</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary search-btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations -->
+        <section class="featured-destinations">
+            <div class="container">
+                <h2 class="section-title">Featured Destinations</h2>
+                <p class="section-subtitle">Explore our handpicked destinations for your next adventure</p>
+                
+                <div class="destination-grid" id="featured-destinations">
+                    <!-- Destinations will be loaded dynamically from destinations.js -->
+                </div>
+                
+                <div class="view-all-container">
+                    <a href="destinations.html" class="btn btn-secondary">View All Destinations</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose GlobeTrot</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Worldwide Destinations</h3>
+                        <p>Explore hundreds of carefully selected destinations around the globe.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Best Price Guarantee</h3>
+                        <p>We promise the best rates with no hidden fees or surprise charges.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our travel experts are available around the clock to assist you.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Booking</h3>
+                        <p>Book with confidence knowing your information is protected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Travelers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"GlobeTrot made our honeymoon unforgettable! The accommodations were perfect and everything was seamless from start to finish."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sarah Johnson">
+                                <div>
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Bali, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The customer service was outstanding. When our flight was delayed, the GlobeTrot team quickly rearranged our pickup and notified our hotel."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.pexels.com/photos/2531553/pexels-photo-2531553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Michael Chen">
+                                <div>
+                                    <h4>Michael Chen</h4>
+                                    <p>Tokyo, Japan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"As a solo traveler, safety is my priority. GlobeTrot's well-vetted accommodations and 24/7 support made me feel secure throughout my journey."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.pexels.com/photos/2896853/pexels-photo-2896853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Emma Roberts">
+                                <div>
+                                    <h4>Emma Roberts</h4>
+                                    <p>Barcelona, Spain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-indicators">
+                        <span class="t-indicator active"></span>
+                        <span class="t-indicator"></span>
+                        <span class="t-indicator"></span>
+                    </div>
+                    <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Get Inspired For Your Next Trip</h2>
+                    <p>Subscribe to our newsletter for exclusive deals and travel tips</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>

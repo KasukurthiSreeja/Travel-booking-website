@@ -1,0 +1,148 @@
+/* Payment Page Styles */
+
+.payment-confirmation {
+    padding: var(--space-24) 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-status {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-12);
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.status-icon,
+.success-icon {
+    font-size: 5rem;
+    margin-bottom: var(--space-6);
+}
+
+.status-icon i {
+    color: var(--primary-500);
+}
+
+.success-icon i {
+    color: var(--success);
+}
+
+.payment-status h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+    color: var(--gray-900);
+}
+
+.payment-status p {
+    color: var(--gray-600);
+    margin-bottom: var(--space-8);
+    font-size: var(--text-lg);
+}
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: var(--gray-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-500);
+    border-radius: var(--radius-full);
+    animation: progress 3s ease forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.booking-reference {
+    background-color: var(--gray-100);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-8);
+}
+
+.booking-reference p {
+    margin-bottom: 0;
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+.booking-reference span {
+    font-weight: 700;
+    color: var(--primary-600);
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+.success-actions .btn {
+    min-width: 160px;
+}
+
+.payment-success {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .payment-confirmation {
+        padding: var(--space-16) var(--space-4);
+    }
+    
+    .payment-status {
+        padding: var(--space-6);
+    }
+    
+    .status-icon,
+    .success-icon {
+        font-size: 4rem;
+    }
+    
+    .payment-status h1 {
+        font-size: var(--text-2xl);
+    }
+    
+    .payment-status p {
+        font-size: var(--text-base);
+    }
+}
+
+@media (max-width: 480px) {
+    .success-actions {
+        flex-direction: column;
+    }
+    
+    .success-actions .btn {
+        width: 100%;
+    }
+}

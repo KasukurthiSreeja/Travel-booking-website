@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery - GlobeTrot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" style="background-image: url('https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="container">
+                <h1>Travel Gallery</h1>
+                <p>Get inspired by stunning destinations around the world</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filters -->
+        <section class="gallery-filters">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="beaches">Beaches</button>
+                    <button class="filter-tab" data-filter="mountains">Mountains</button>
+                    <button class="filter-tab" data-filter="cities">Cities</button>
+                    <button class="filter-tab" data-filter="nature">Nature</button>
+                    <button class="filter-tab" data-filter="architecture">Architecture</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid">
+            <div class="container">
+                <div class="gallery-container" id="gallery-container">
+                    <!-- Gallery items will be loaded dynamically -->
+                </div>
+                
+                <!-- Lightbox -->
+                <div class="lightbox" id="lightbox">
+                    <div class="lightbox-content">
+                        <button class="lightbox-close">&times;</button>
+                        <img src="" alt="" class="lightbox-image">
+                        <div class="lightbox-caption"></div>
+                        <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Load More Button -->
+        <section class="load-more">
+            <div class="container">
+                <button id="load-more-btn" class="btn btn-secondary">Load More</button>
+            </div>
+        </section>
+
+        <!-- Share Your Photos -->
+        <section class="share-photos">
+            <div class="container">
+                <div class="share-content">
+                    <h2>Share Your Adventures</h2>
+                    <p>Have amazing travel photos? Share them with the GlobeTrot community!</p>
+                    <button class="btn btn-primary" id="share-photos-btn">Share Your Photos</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo Upload Modal -->
+    <div class="modal" id="upload-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Travel Photos</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="photo-upload-form">
+                    <div class="form-group">
+                        <label for="photo-title">Photo Title</label>
+                        <input type="text" id="photo-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-location">Location</label>
+                        <input type="text" id="photo-location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-category">Category</label>
+                        <select id="photo-category" required>
+                            <option value="beaches">Beaches</option>
+                            <option value="mountains">Mountains</option>
+                            <option value="cities">Cities</option>
+                            <option value="nature">Nature</option>
+                            <option value="architecture">Architecture</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-description">Description</label>
+                        <textarea id="photo-description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-file">Upload Photo</label>
+                        <div class="file-upload">
+                            <input type="file" id="photo-file" accept="image/*" required>
+                            <label for="photo-file" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i> Choose a file
+                            </label>
+                            <div class="file-name"></div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Upload Photo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
